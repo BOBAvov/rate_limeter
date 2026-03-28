@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     workflows: [ "CI" ]
 
+
 jobs:
   build:
     runs-on: self-hosted
