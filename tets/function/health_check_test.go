@@ -2,8 +2,9 @@ package function
 
 import (
 	"net/http"
-	"rate_limeter/tets/function/suite"
 	"testing"
+
+	"github.com/BOBAvov/rate_limeter/tets/function/suite"
 )
 
 func TestHealthCheck(t *testing.T) {
