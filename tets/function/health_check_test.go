@@ -24,4 +24,5 @@ func TestHealthCheck(t *testing.T) {
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %v", res.StatusCode)
 	}
+	t.Logf("response: %v", res)
 }

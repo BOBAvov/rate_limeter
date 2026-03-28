@@ -25,6 +25,10 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Hi!"))
+	})
 	mux.HandleFunc("/health", HealthHandler)
 	if err := http.ListenAndServe(":8080", mux); err != nil {
 		panic(err)
