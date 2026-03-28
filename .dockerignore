@@ -1,0 +1,11 @@
+.git
+.github
+.vscode
+README.md
+LICENSE
+docs/
+tests/
+testdata/
+coverage/
+*.md
+.DS_Store
