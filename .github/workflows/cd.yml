@@ -1,7 +1,9 @@
 name: CD
 on:
-  push:
+  workflow_run:
+    types: [completed]
     branches: [ main ]
+    workflows: [ "CI" ]
 
 jobs:
   build:
@@ -16,5 +18,3 @@ jobs:
         with:
           push: false
           tags: user/app:latest
-
-#        run: docker compose -f docker-compose.yml up -d
